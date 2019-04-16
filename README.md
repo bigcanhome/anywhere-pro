@@ -2,7 +2,7 @@
 
 在[anywhere](https://www.npmjs.com/package/anywhere)基础上可在root下创建 `.proxyrc.js` 
 
-```
+``` js
 module.exports = {
   'proxy': {
     '/xxx': {
