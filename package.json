@@ -1,6 +1,6 @@
 {
   "name": "anywhere-pro",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "anywhere升级版",
   "bin": {
     "anywhere-pro": "./bin/anywhere-pro",
@@ -8,6 +8,10 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/uaio/anywhere-pro"
   },
   "dependencies": {
     "connect": "^3.6.6",
