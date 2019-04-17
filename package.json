@@ -1,6 +1,6 @@
 {
   "name": "anywhere-pro",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "anywhere升级版",
   "bin": {
     "anywhere-pro": "./bin/anywhere-pro",

@@ -19,7 +19,8 @@ const app = new express();
 
 var exec = require('child_process').exec;
 var spawn = require('child_process').spawn;
-var proxyconfig = require(path.resolve(process.cwd(), '.proxyrc.js'));
+var proxyconfig;
+fs.existsSync(path.resolve(process.cwd(), '.proxyrc.js')) && (proxyconfig = require(path.resolve(process.cwd(), '.proxyrc.js')));
 var argv = require("minimist")(process.argv.slice(2), {
   alias: {
     'silent': 's',
@@ -93,6 +94,7 @@ var log = debug('anywhere');
 
 app.use(function (req, res, next) {
   res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Credentials", "true");
   if (argv.log) {
     log(req.method + ' ' + req.url);
   }
